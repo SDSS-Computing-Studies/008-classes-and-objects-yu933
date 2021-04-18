@@ -24,28 +24,51 @@ constructor     - should require the student name, studentNumber and grade (in t
 
 class student:
 
+    name = ""
+    studentNumber = ""
+    grade = 0
+    courses = []
+    grades = []
+
     # properties should be listed first
 
-    def __init__(): # You will need to create your own input parameters for all methods
-        pass
-
+    def __init__(self, name, studentNumber, grade): # You will need to create your own input parameters for all methods
+        self.name = name
+        self.studentNumber = studentNumber
+        self.grade = grade
+    '''
     def __del__():
         pass
-
+    '''
     def average(self):
-        pass
+        sum = 0
+        for g in self.grades:
+            sum += g
 
-def main():
-    # This contains test data that will be used by the autograder.
-    # do not modify this function
+        return sum/len(self.grades)
 
-    st1 = student("Anita Bath","91334",11)
-    st1.getCourses( ["English","Math","PE","Computers","History","Biology","Japanese"] )
-    st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
+    def getHonorRoll(self):
+        s = self.grades
+        s.sort(reverse=True)
+        sum = 0
+        for g in s[:5]:
+            sum += g
+        a = sum / 5
+        return a >= 86
 
-    st2 = student("Joe Lunchbox","12346", 11)
-    st2.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
-    st2.getGrades( [71, 98, 93, 95, 68, 81, 71])
+    def showCourses(self):
+        print(course)
+
+    def showGrade(self, i : int):
+        print(self.courses[i] + ":" + self.grade[i])
+
+    def getCourses(self, l):
+        for i in l:
+            self.courses.append(i)
+
+    def getGrades(self, l):
+        for i in l:
+            self.grades.append(i)
 
 
 
