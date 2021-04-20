@@ -70,6 +70,12 @@ class student:
         for i in l:
             self.grades.append(i)
 
+
+
+
+
+
+
 def main():
     # This contains test data that will be used by the autograder.
     # do not modify this function
