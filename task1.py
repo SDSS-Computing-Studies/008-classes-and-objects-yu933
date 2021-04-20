@@ -82,10 +82,11 @@ def main():
     st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
     print(st1.average())
 
-    st2 = student("Joe Lunchbox","12346", 11)
-    st2.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
-    st2.getGrades( [71, 98, 93, 95, 68, 81, 71])
 
+
+    assert st1.name == "Anita Bath"
+    assert round(st1.average(),1) == 89.4
+    assert st1.getHonorRoll() == True 
 
 
 
