@@ -44,8 +44,8 @@ class student:
         sum = 0
         for g in self.grades:
             sum += g
-        print(sum)
-        print(len(self.grades))
+        print(f"sum{sum}")
+        print(f"length{len(self.grades)}")
         return sum/len(self.grades)
 
     def getHonorRoll(self):
