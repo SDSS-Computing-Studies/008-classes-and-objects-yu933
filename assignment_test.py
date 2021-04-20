@@ -10,4 +10,3 @@ def test1():
   assert round(st1.average(),1) == 89.4
   assert st1.getHonorRoll() == True 
 
-test1()
